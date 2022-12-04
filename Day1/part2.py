@@ -1,7 +1,6 @@
+import openInput
 
-f = open("input.txt", "r")
-data = f.read();
-
+data = openInput.openFile()
 x = data.split("\n\n");
 
 acc = [];

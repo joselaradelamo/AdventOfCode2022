@@ -1,9 +1,8 @@
-acc = 0
+import openInput
 
-f = open("input.txt", "r")
-#f = open("example.txt", "r")
-data = f.read();
+data = openInput.openFile()
 x = data.split("\n");
+acc = 0
 
 for turns in x:
   turn = turns.split(' ');
