@@ -1,16 +1,16 @@
-def openFile(file="input.txt"):
-  f = open(file, "r")
+def openFile(inputFile):
+  f = open(inputFile, "r") if inputFile else open("input.txt", "r")
   readedFile = f.read()
   f.close()
   return readedFile
 
-def splitByLine(value):
-  return value.split("\n")
+def splitLines(value, lines=1):
+  splitVal = ""
+  for x in range(0,lines):
+    splitVal = f"{splitVal}\n"
+  return value.split(splitVal)
 
-def splitTwoLines(value):
-  return value.split("\n\n")
-
-def testing(part, inputFile=False):
+def testing(part, inputFile):
   return part(inputFile) if inputFile else part()
 
 def getExample(day):

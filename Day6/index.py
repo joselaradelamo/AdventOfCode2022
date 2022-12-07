@@ -1,7 +1,7 @@
 from helpers import openFile
 
-def launch_function(numberOfLetters, inputFile=False):
-  letters = openFile(inputFile) if inputFile else openFile()
+def launch_function(numberOfLetters, inputFile):
+  letters = openFile(inputFile)
   finalIndex=0
   actualStartIndex=0
   values=[]
@@ -18,8 +18,8 @@ def launch_function(numberOfLetters, inputFile=False):
     else:
       return finalIndex
 
-def part1(inputFile=False):
-  return launch_function(4, inputFile) if inputFile else launch_function(4)
+def part1(inputFile):
+  return launch_function(4, inputFile)
 
-def part2(inputFile=False):
-  return launch_function(14, inputFile) if inputFile else launch_function(14)
+def part2(inputFile):
+  return launch_function(14, inputFile)

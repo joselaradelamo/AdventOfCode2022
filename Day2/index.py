@@ -1,8 +1,8 @@
-from helpers import openFile,splitByLine
+from helpers import openFile,splitLines
 
-def part1(inputFile=False):
-  data = openFile(inputFile) if inputFile else openFile()
-  x = splitByLine(data)
+def part1(inputFile):
+  data = openFile(inputFile)
+  x = splitLines(data)
   acc = 0
 
   win = 6
@@ -34,9 +34,9 @@ def part1(inputFile=False):
         acc += tie
   return acc
 
-def part2(inputFile=False):
-  data = openFile(inputFile) if inputFile else openFile()
-  x = splitByLine(data)
+def part2(inputFile):
+  data = openFile(inputFile)
+  x = splitLines(data)
   acc = 0
 
   win = 6

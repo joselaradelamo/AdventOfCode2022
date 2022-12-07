@@ -1,4 +1,4 @@
-from helpers import openFile,splitByLine
+from helpers import openFile,splitLines
 import re
 
 class Directory:
@@ -32,9 +32,9 @@ def get_directories_size(lines):
           directory.size += int(size)
   return directoriesArray
 
-def part1(inputFile=False):
-  result = openFile(inputFile) if inputFile else openFile()
-  lines = splitByLine(result)
+def part1(inputFile):
+  result = openFile(inputFile)
+  lines = splitLines(result)
   previousDirectories = []
   directoriesArray = get_directories_size(lines)
   sizeTotal = 0
@@ -43,9 +43,9 @@ def part1(inputFile=False):
       sizeTotal += int(directory.size)
   return sizeTotal
 
-def part2(inputFile=False):
-  result = openFile(inputFile) if inputFile else openFile()
-  lines = splitByLine(result)
+def part2(inputFile):
+  result = openFile(inputFile)
+  lines = splitLines(result)
   directoriesArray = get_directories_size(lines)
   enoughSize = []
   totalSpace = 70000000

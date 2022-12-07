@@ -1,8 +1,8 @@
-from helpers import openFile,splitByLine,splitTwoLines
+from helpers import openFile,splitLines
 import re
 
 def doMovements(cratesArray, inputValue, part):
-  orders = splitByLine(inputValue)
+  orders = splitLines(inputValue)
   for order in orders:
     x,movements,y,init,z,to = re.split("\s", order)
     positionInit = int(init)-1
@@ -24,7 +24,7 @@ def doMovements(cratesArray, inputValue, part):
 
 def createCrates(start):
   cratesArray = []; 
-  elements = splitByLine(start)
+  elements = splitLines(start)
   values = elements.pop()
   numberOfCrates = int(values.split().pop())
   for i in range(numberOfCrates):
@@ -39,9 +39,9 @@ def createCrates(start):
       index += 1
   return cratesArray
 
-def launch_function(part, inputFile=False):
-  data = openFile(inputFile) if inputFile else openFile()
-  start,inputValue = splitTwoLines(data)
+def launch_function(part, inputFile):
+  data = openFile(inputFile)
+  start,inputValue = splitLines(data,2)
   cratesArray = createCrates(start)
   cratesResult = doMovements(cratesArray, inputValue, part)
   cratesValue = ''
@@ -50,8 +50,8 @@ def launch_function(part, inputFile=False):
 
   return cratesValue
 
-def part1(inputFile=False):
-  return launch_function(1, inputFile) if inputFile else launch_function(1)
+def part1(inputFile):
+  return launch_function(1, inputFile)
 
-def part2(inputFile=False):
-  return launch_function(2, inputFile) if inputFile else launch_function(2)
+def part2(inputFile):
+  return launch_function(2, inputFile)

@@ -1,4 +1,4 @@
-from helpers import openFile,splitByLine
+from helpers import openFile,splitLines
 
 def recoverLetter(arrayData):
   firstBack = arrayData[0]
@@ -8,9 +8,9 @@ def recoverLetter(arrayData):
     if secondBack.find(lettersArray) > -1 and thirdBack.find(lettersArray) > -1:
       return lettersArray
 
-def part1(inputFile=False):
-  data = openFile(inputFile) if inputFile else openFile()
-  backpacks = splitByLine(data)
+def part1(inputFile):
+  data = openFile(inputFile)
+  backpacks = splitLines(data)
   letters = []
   for backpack in backpacks:
     a,b = backpack[:len(backpack)//2], backpack[len(backpack)//2:]
@@ -24,14 +24,14 @@ def part1(inputFile=False):
         
   return sum(letters)
 
-def part2(inputFile=False):
-  data = openFile(inputFile) if inputFile else openFile()
-  backpacks = splitByLine(data)
+def part2(inputFile):
+  data = openFile(inputFile)
+  backpacks = splitLines(data)
   letters = []
   lines = 0
   group = []
   for backpack in backpacks:
-    lines = lines + 1
+    lines += 1
     group.append(backpack)
     if lines == 3:
       letter = recoverLetter(group)  

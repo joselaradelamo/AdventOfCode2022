@@ -1,22 +1,22 @@
-from helpers import openFile,splitByLine,splitTwoLines
+from helpers import openFile,splitLines
 
-def part1(inputFile=False):
-  data = openFile(inputFile) if inputFile else openFile()
-  x = splitTwoLines(data)
+def part1(inputFile):
+  data = openFile(inputFile)
+  x = splitLines(data, 2)
   total = 0 
   for value in x:
     acc = 0
-    for num in splitByLine(value):
+    for num in splitLines(value):
       acc += int(num)
       if acc > total: total = acc
   return total
 
-def part2(inputFile=False):
-  data = openFile(inputFile) if inputFile else openFile()
-  x = splitTwoLines(data)
+def part2(inputFile):
+  data = openFile(inputFile)
+  x = splitLines(data, 2)
   acc = []
   for value in x:
-    el = splitByLine(value)
+    el = splitLines(value)
     elf = 0
     for num in el:
       elf += int(num)

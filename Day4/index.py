@@ -1,8 +1,8 @@
-from helpers import openFile,splitByLine
+from helpers import openFile,splitLines
 
-def part1(inputFile=False):
-  data = openFile(inputFile) if inputFile else openFile()
-  assignments = splitByLine(data)
+def part1(inputFile):
+  data = openFile(inputFile)
+  assignments = splitLines(data)
   total = 0
   for value in assignments:
     part1, part2 = value.split(',')
@@ -14,9 +14,9 @@ def part1(inputFile=False):
       total += 1
   return total
 
-def part2(inputFile=False):
-  data = openFile(inputFile) if inputFile else openFile()
-  assignments = splitByLine(data)
+def part2(inputFile):
+  data = openFile(inputFile)
+  assignments = splitLines(data)
   total = 0
   for value in assignments:
     part1, part2 = value.split(',')
