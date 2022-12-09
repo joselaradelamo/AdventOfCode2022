@@ -3,6 +3,10 @@
 
 name: unit-testing
 
+on:
+  push:
+    branches: [ "main" ]
+
 jobs:
   build:
     name: unit-testing
