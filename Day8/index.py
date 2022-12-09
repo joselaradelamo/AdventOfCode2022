@@ -20,16 +20,15 @@ def is_visible(positionValue, totalArray, topPosition, bottomPosition, rightPosi
     for rightIndex in range(startPosition, rightPosition+1):
       if positionValue <= int(totalArray[topPosition][rightIndex]):
         result = False
-
   return result
-  
+
 def sum_value(positionValue, totalArray, topPosition, bottomPosition, rightPosition, leftPosition,  direction):
   value = 0
   if (direction == 'up'):
     for topIndex in range(int(topPosition)-1, -1, -1):
       if positionValue > int(totalArray[topIndex][rightPosition]):
         value += 1
-      else: 
+      else:
         value += 1
         return value
   if (direction == 'down'):
