@@ -10,9 +10,6 @@ def splitLines(value, lines=1):
     splitVal = f"{splitVal}\n"
   return value.split(splitVal)
 
-def testing(part, inputFile):
-  return part(inputFile) if inputFile else part()
-
 def getExample(day):
   return f"inputFiles/{day}/example.txt"
 

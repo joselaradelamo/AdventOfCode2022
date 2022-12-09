@@ -1,5 +1,4 @@
 from helpers import openFile,splitLines
-import re
 
 class Directory:
   def __init__(self, name, size):
