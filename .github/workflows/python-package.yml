@@ -4,7 +4,7 @@
 name: unit-testing
 
 on:
-  pull_request:
+  push:
     branches: [ "main" ]
 
 jobs:
