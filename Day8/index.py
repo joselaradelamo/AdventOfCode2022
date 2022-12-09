@@ -22,6 +22,7 @@ def is_visible(positionValue, totalArray, topPosition, bottomPosition, rightPosi
         result = False
 
   return result
+  
 def sum_value(positionValue, totalArray, topPosition, bottomPosition, rightPosition, leftPosition,  direction):
   value = 0
   if (direction == 'up'):
