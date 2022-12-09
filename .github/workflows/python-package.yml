@@ -3,10 +3,6 @@
 
 name: unit-testing
 
-on:
-  pull_request:
-    branches: [ "main" ]
-
 jobs:
   build:
     name: unit-testing
