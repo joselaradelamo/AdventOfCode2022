@@ -67,7 +67,7 @@ def part1(inputFile):
     totalArray.append(lineArray) 
   rigthBorder = len(lines) - 1
   bottomBorder = len(lines) - 1
-  visible = (rigthBorder+1) * 4 - 4 
+  visible = (rigthBorder+1) * 4 - 4
   for topIndex in range(1, bottomBorder):
     for leftIndex in range(1, rigthBorder):
       positionValue = int(totalArray[topIndex][leftIndex])
